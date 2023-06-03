@@ -14,10 +14,6 @@ const port = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use("/", (req, res) => {
-//   res.send("gg");
-// });
-app.use("/images", express.static("public/images"));
 app.use("/auth", userRoutes);
 app.use("/product", productRoutes);
 app.use("/upload", uploadController);
